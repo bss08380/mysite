@@ -1,0 +1,74 @@
+body {
+	background-image: url("horses.jpg");
+}
+div.jumbotron {
+	background-color:rgba(25, 25, 25, 0.8);
+}
+div.jumbotron h1 {
+	font-family: Garamond;
+	color: #DFE2DB;
+	text-align: center;
+}
+div.jumbotron p {
+	color: #DFE2DB;
+	text-align: center;
+}
+#nav_content {
+    background-color:rgba(25, 25, 25, 0.8);
+    color: #DFE2DB;
+    border-radius: 8px;
+}
+
+/*BOOTSTRAP NAVIGATION BAR STYLE CHANGES*/
+nav.navbar-default {
+    background-color:rgba(25, 25, 25, 0.9);
+    border: 0px solid black;
+    border-radius: 0;
+    padding: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+/*header*/
+nav.navbar-default a.navbar-brand {
+    color: #FFF056;
+    font-family: Garamond;
+}
+nav.navbar-default a.navbar-brand:hover,
+nav.navbar-default a.navbar-brand:focus {
+    color: #FFF056;
+}
+/*link*/
+nav.navbar-default ul.navbar-nav > li > a {
+    color: #DFE2DB;
+}
+nav.navbar-default ul.navbar-nav > li > a:hover,
+nav.navbar-default ul.navbar-nav > li > a:focus {
+    color: #FFF056;
+    background-color:rgba(25, 25, 25, 0.9);
+}
+nav.navbar-default ul.navbar-nav > .active > a, 
+nav.navbar-default ul.navbar-nav > .active > a:hover, 
+nav.navbar-default ul.navbar-nav > .active > a:focus {
+    color: #191919;
+    background-color:#FFF056;
+    font-weight: bold;
+}
+nav.navbar-default ul.navbar-nav > .open > a, 
+nav.navbar-default ul.navbar-nav > .open > a:hover, 
+nav.navbar-default ul.navbar-nav > .open > a:focus {
+    color: #191919;
+    background-color:#FFF056;
+    font-weight: bold;
+}
+/*BOOTSTRAP LIST GROUP STYLE CHANGES*/
+ul.list-group {
+	background-color: transparent;
+	padding: 10px;
+}
+li.list-group-item {
+	background-color:rgba(25, 25, 25, 0.2);
+	border:1px solid rgba(25, 25, 25, 0.2);
+}
+h2.list-group-header {
+	padding-left: 20px;
+}
