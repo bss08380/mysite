@@ -1,0 +1,26 @@
+h1.project_header {
+	text-align: center;
+}
+a.thumbnail {
+	border: 0px solid black;
+}
+p.projects {
+	padding: 20px;
+}
+
+#projects_row_website {
+    background-color:rgba(25, 25, 25, 0.8);
+    color: #DFE2DB;
+}
+#projects_row_mcvsg {
+    background-color:rgba(25, 25, 25, 0.8);
+    color: #DFE2DB;
+}
+#projects_row_xcc {
+    background-color:rgba(25, 25, 25, 0.8);
+    color: #DFE2DB;
+}
+#projects_row_emulation {
+    background-color:rgba(25, 25, 25, 0.8);
+    color: #DFE2DB;
+}

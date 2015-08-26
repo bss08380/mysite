@@ -1,0 +1,35 @@
+<div class="container">
+	<div id="projects_row_mcvsg" class="row">
+		<h1 class="project_header" >MC-VSG Control</h1>
+		<p>
+			The pride of my professional career, MC-VSG Control is the command/control application required by the X-COM Multi-Channel Vector Signal Generator.  The MC-VSG is a four channel by 150+ MSa/S I/Q playback device capable of achieving up to 3.2 GB/S of RF playback.  The control UI allows the user to complete playbacks, sequence files, view file meta data, and configure numerous operational settings on the device.  Furthermore, the interface is capable of controlling up to five simulataneous MC-VSG devices.  This presents a series of technical problems as each must be regularly polled and manipulated via UDP due to the limited capabilities of the on-board Power-PC processor.  
+		</p>
+		<p>
+			To solve these hurdles, the application (C#.NET/WPF) utilizes complex multi-threading schemes for the polling and UI logic, layers of inheritance hierarchies to aid in the management of devices and device types, and advanced C#.NET features such as generics and reflection.  It also includes a build-in TCP/IP API for use with unit-testing and hardware stress-testing.  The project is primarily MVVM where applicable in order to isolate the interface (of which there are many different views for any given view model), the view models, and the models and UDP data layers.
+		</p>
+		<p>
+			The result of this complexity is an application which is an aesthetically pleasing powerhouse capable of tracking and displaying multitudes of complex state information to a user at any given time without the need for explicit interaction.
+		</p>
+		<p>
+			The product is currently in use by various DoD entities and DoD contractors.
+		</p>
+		<br/>
+		<div class="row">
+			<div class="col-sm-4">
+				<a href="img/mcvsgcontrol_playback.png" class="thumbnail">
+					<img src="img/mcvsgcontrol_playback.png" >
+				</a>
+			</div>
+			<div class="col-sm-4">
+				<a href="img/mcvsgcontrol_global.png" class="thumbnail">
+					<img src="img/mcvsgcontrol_global.png" >
+				</a>
+			</div>
+			<div class="col-sm-4">
+				<a href="img/mcvsgcontrol_transferring.png" class="thumbnail">
+					<img src="img/mcvsgcontrol_transferring.png" >
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

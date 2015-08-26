@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Brandon Smithers - Welcome</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/projects.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script>
+			//the last/current link set to be the active link
+			var nav_link_inst;
+			//loads the home content into the main page
+			function loadHomeContent() {
+				loadSiteContent("home");
+			}
+			//loads the home content into the main page
+			function loadProjectsContent() {
+				loadSiteContent("projects");
+			}
+			//loads the home content into the main page
+			function loadHobbiesContent() {
+				loadSiteContent("hobbies");
+			}
+			//loads specified content into the main page
+			function loadSiteContent(contentName) {
+				//these names and paths are dynamically generated based upon 'contentName'
+				var nav_content_div = $("#nav_content");
+				var content_to_load = "html/" + contentName + ".html";
+				var nav_link_name = "nav_li_" + contentName;
+				//shift focus in navigation bar and load content pointed to by 'content_to_load'
+				nav_link_inst.className = "";
+				nav_link_inst = document.getElementById(nav_link_name);//shift focus to current selection
+				nav_link_inst.className = "active";
+				nav_content_div.load(content_to_load);
+			}
+		</script>
+	</head>
+	<body class="main_body" >
+		<div id="background-image-div" />
+		<div class="container" >
+			<!--Navigation bar beneath the header, above the selected content-->
+			<nav class="navbar navbar-default" >
+				<div class="container-fluid" >
+				    <div class="navbar-header">
+				     	<p id="navbar_header" class="navbar-text" >Brandon Smithers</p>
+			      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs_navbar">
+			        		<span class="icon-bar"></span>
+			        		<span class="icon-bar"></span>
+			        		<span class="icon-bar"></span> 
+			      		</button>
+				    </div>
+					<div class="collapse navbar-collapse" id="bs_navbar">
+						<ul class="nav navbar-nav">
+							<li id="nav_li_home" class="active" ><a id="nav_link_home" href="#" onclick="loadHomeContent();">Home</a></li>
+							<li id="nav_li_projects" ><a id="nav_link_projects" href="#" onclick="loadProjectsContent()">Projects</a></li>
+							<li id="nav_li_hobbies" ><a id="nav_link_hobbies" href="#" onclick="loadHobbiesContent()">Hobbies</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li id="nav_li_resume" ><a id="nav_link_resume" href="res/resume.pdf" >Resume</a></li>
+							<li id="nav_li_linkedin" ><a id="nav_link_linkedin" href="https://www.linkedin.com/in/brandonsmithers" >LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!--Head/Jumbotron at the top of the page-->
+			<div class="jumbotron" >
+				<h1 >Brandon Smithers</h1>
+				<div class="row">
+					<p >Software Engineer Team Lead</p>
+					<p >X-COM Systems</p>
+				</div>
+			</div>
+			<!--The content of the page-->
+			<div id="nav_content" class="rows"></div>
+		</div>
+		<script type="text/javascript">
+			nav_link_inst = document.getElementById("nav_link_home");//initial selection
+			nav_link_inst.className = "active";//set initial selection active
+			loadHomeContent();
+		</script>
+	</body>
+</html>
