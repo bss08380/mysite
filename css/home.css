@@ -1,0 +1,15 @@
+h1.skills-header {
+    color: #DFE2DB;
+	text-align: center;
+	font-family: Garamond;
+    font-size: 400%;
+    background-color: #191919;
+    width: 100%;
+    padding: 1cm;
+    margin: 0;
+}
+#home-content {
+	width: 100%;
+    color: #191919;
+    margin: 20px 0 0 0;
+}
