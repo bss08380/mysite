@@ -1,36 +1,64 @@
+/*
+Main, top area styling
+**************************************
+*/
 div.project_header {
-    margin: 0 30px 0 50px;
+    margin: 0 0px 0 0px;
 }
+
+/*
+Styling of common elements in the projects page:
+-Header
+-Highlights (the text beneath the header)
+-The image thumbnails
+-The paragraph text
+**************************************
+*/
 h1.project-header {
     vertical-align: center;
 	text-align: center;
     font-family: Garamond;
     font-size: 400%;
+    padding: 0;
 }
 h1.project-highlights {
     vertical-align: center;
     text-align: center;
     font-size: 150%;
     color: #FFF056;
-    margin: 40px 0 10px 0;
 }
-a.thumbnail {
-    border: 0 none;
+a.borderless-thumbnail {
+    border: 1px solid #191919;
     box-shadow: none;
+    padding: 0;
+}
+a.borderless-thumbnail:hover {
+    border: 1px solid #FFF056;
+    box-shadow: 0px 0px 10px #FFF056;
+    padding: 1;
 }
 p.projects {
     margin: 0 30px 0 30px;
 }
 
+/*
+Styling of the main blocks for projects
+**************************************
+*/
 #projects_row_mcvsg {
     color: #DFE2DB;
     background-color: #191919;
     width: 100%;
     padding: 30px 0 30px 0;
 }
+#mcvsg-image-container {
+    padding: 30px;
+}
 #projects_row_xcc {
     color: #191919;
+    background-color: #DFE2DB;
     width: 100%;
+    padding: 30px 0 30px 0;
 }
 #projects_row_emulation {
     color: #DFE2DB;

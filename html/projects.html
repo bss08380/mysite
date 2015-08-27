@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!--External libraries-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--Bootstrap libraries-->    
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!--Image animation libraries (MagnificPopup)-->
+		<script type="text/javascript" src="../lib/jquery.magnific-popup.js"></script>
+		<link rel='stylesheet prefetch' href='../lib/magnific-popup.css'>
+		<!--My libraries-->
 		<link rel="stylesheet" href="../css/projects.css">
 	</head>
 	<body>
+		<!--The main row for the MC-VSG project-->
 		<div id="projects_row_mcvsg" class="container-fluid" >
 			<div class="row-fluid">
-				<div class="col-sm-3">
+				<div class="col-sm-2">
 					<h1 class="project-header" >MC-VSG Control</h1>
-					<h1 class="project-highlights" ><i>C#.NET/WPF Application</i></h1>
+					<h1 class="project-highlights" ><i>C#.NET/WPF - MVVM</i></h1>
 				</div>
-				<div class="col-sm-9" >
+				<div class="col-sm-10" >
 					<p class="projects">
 						MC-VSG Control is the command/control application required by the X-COM Multi-Channel Vector Signal Generator.  The MC-VSG is a four channel by 150+ MSa/S I/Q playback device capable of achieving up to 3.2 GB/S of RF playback.  The control UI allows the user to complete playbacks, sequence files, view file meta data, and configure numerous operational settings on the device.  Furthermore, the interface is capable of controlling up to five simulataneous MC-VSG devices.  This presents a series of technical problems as each must be regularly polled and manipulated via UDP due to the limited capabilities of the on-board Power-PC processor.  
 					</p>
@@ -30,25 +37,64 @@
 						The product is currently in use by various DoD entities and DoD contractors.
 					</p>
 					<br/>
+					<br/>
 				</div>
 			</div>
 			<div class="row-fluid">
 				<div class="col-sm-4">
-					<a href="../img/mcvsgcontrol_playback.png" class="thumbnail">
-						<img src="img/mcvsgcontrol_playback.png" >
+					<a href="../img/mcvsgcontrol_playback.png" data-effect="mfp-move-horizontal" class="image-viewer thumbnail borderless-thumbnail">
+						<img src="../img/mcvsgcontrol_playback.png" >
 					</a>
 				</div>
 				<div class="col-sm-4">
-					<a href="../img/mcvsgcontrol_global.png" class="thumbnail">
-						<img src="img/mcvsgcontrol_global.png" >
+					<a href="../img/mcvsgcontrol_global.png" class="image-viewer thumbnail borderless-thumbnail">
+						<img src="../img/mcvsgcontrol_global.png" >
 					</a>
 				</div>
 				<div class="col-sm-4">
-					<a href="../img/mcvsgcontrol_transferring.png" class="thumbnail">
-						<img src="img/mcvsgcontrol_transferring.png" >
+					<a href="../img/mcvsgcontrol_transferring.png" class="image-viewer thumbnail borderless-thumbnail">
+						<img src="../img/mcvsgcontrol_transferring.png" >
 					</a>
 				</div>
 			</div>
 		</div>
+		<!--The main row for the X-COM Control project-->
+		<div id="projects_row_xcc" class="container-fluid" >
+			<div class="row-fluid">
+				<div class="col-sm-2">
+					<h1 class="project-header" >X-COM Control</h1>
+					<h1 class="project-highlights" style="color:gray;" ><i>C#.NET/WPF</i></h1>
+				</div>
+				<div class="col-sm-7" >
+					<p class="projects">
+						X-COM Control is the command/control application required by the X-COM IQC 5000 A/B series products.  The IQC is a two channel I/Q record/playback system capable of up to 1.6 GB/S of sustained playback or record operations into SSD RAIDs capable of storing up to 32 TB of data.  X-COM Control enables users to configure, execute, and monitor recordings and playbacks of various types, sort through file metadata and marker information, and manage the files.  Built-in PCIe driver capabilities allow recorded data to be downloaded at up to 1GB/S.  
+					</p>
+					<br/>
+					<p class="projects">
+						The project is primarily C#.NET/WPF with an underlying interoperability layer which interfaces with the unmanaged C/C++ driver calls and optimized, high-speed transfer code.  Communication with the IQC requires a deep stack of UDP-based state retrieval logic, in which hundreds of registers need to be read and analyzed in order to determine the machine's current state, which is passed to the view layer through the view model.
+					</p>
+					<br/>
+					<p class="projects">
+						The product is currently in use by numerous DoD entities, DoD contractors, and civilian companies.
+					</p>
+					<br/>
+					<br/>
+				</div>
+				<div class="col-sm-3">
+					<a href="../img/xcomcontrol_playback.png" class="image-viewer thumbnail borderless-thumbnail">
+						<img src="../img/xcomcontrol_playback.png" >
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--Body scripts, basically just popup code-->
+		<script>
+			//this function gets the image ready for usage as a popup
+			jQuery(document).ready(function() {
+			  $(".image-viewer").magnificPopup({
+			    type: "image"
+			  });
+			});
+		</script>
 	</body>
 </html>
