@@ -2,58 +2,23 @@
 <html >
 	<head>
 		<title>Brandon Smithers - Welcome</title>
+		<!--External libraries-->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--Files for this project-->
 		<link rel="stylesheet" href="css/main.css">
-		<script>
-			console.log("Starting initial javascript");
-			//function to handle history entries which look at specific content selections
-			var state = "";
-			$(window).on('popstate', function(e){
-				state = e.originalEvent.state;
-				console.log("pop state: " + state.selectedContent);
-			    if(state){
-			        loadSiteContent(state.selectedContent);
-			    }
-			});
-			//the last/current link set to be the active link
-			var nav_link_inst;
-			//loads the home content into the main page
-			function loadHomeContent() {
-				loadSiteContent("home");
-			}
-			//loads the home content into the main page
-			function loadProjectsContent() {
-				loadSiteContent("projects");
-			}
-			//loads the home content into the main page
-			function loadHobbiesContent() {
-				loadSiteContent("hobbies");
-			}
-			//loads specified content into the main page
-			function loadSiteContent(contentName) {
-				//these names and paths are dynamically generated based upon 'contentName'
-				var nav_content_div = $("#nav_content");
-				var content_to_load = "html/" + contentName + ".html";
-				var nav_link_name = "nav_li_" + contentName;
-				//shift focus in navigation bar and load content pointed to by 'content_to_load'
-				nav_link_inst.className = "";
-				nav_link_inst = document.getElementById(nav_link_name);//shift focus to current selection
-				nav_link_inst.className = "active";
-				nav_content_div.load(content_to_load);
-				window.history.pushState({ selectedContent: contentName }, "", "");
-			}
-		</script>
+		<script src="js/main.js"></script>
+		<!--This enables the site to size down to small/mobile screens-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
-	<body class="main_body" style="width:100%;" >
-		<div class="container" style="width:100%;" >
+	<body class="main-body">
+		<div id="main-div" class="container">
 			<!--Navigation bar beneath the header, above the selected content-->
 			<nav class="navbar navbar-default" >
 				<div class="container-fluid" >
 				    <div class="navbar-header">
-				     	<p id="navbar_header" class="navbar-text" ><i>Brandon Smithers</i></p>
+				     	<a id="navbar_header" class="navbar-brand" href="http://brandonsmithers.com" >Brandon Smithers</a>
 			      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs_navbar">
 			        		<span class="icon-bar"></span>
 			        		<span class="icon-bar"></span>
@@ -87,12 +52,7 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			console.log("Starting body javascript");
-			if (state == "") {
-				nav_link_inst = document.getElementById("nav_link_home");//initial selection
-				nav_link_inst.className = "active";//set initial selection active
-				loadHomeContent();
-			}
+			initBody();
 		</script>
 	</body>
 </html>

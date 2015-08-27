@@ -1,4 +1,13 @@
-body {
+/*
+Main, top-level divs and body, jumbotron area, etc.
+**************************************
+*/
+#main-div {
+    width: 100%;
+    padding: 0;
+}
+#main-body {
+    width: 100%;
 }
 div.jumbotron {
 	background-color:transparent;
@@ -13,7 +22,16 @@ div.jumbotron p {
 	text-align: center;
 }
 
-/*BOOTSTRAP NAVIGATION BAR STYLE CHANGES*/
+/*
+Navigation bar changes and variations
+from the standard bootstrap look/fee/behavior
+
+There are lots of little things in here:
+-nav bar div area
+-nav bar items and list (ul,li)
+-open, active, hover, etc. look/feel
+**************************************
+*/
 nav.navbar-default {
     background-color: #191919;
     border: 0px solid black;
@@ -23,16 +41,18 @@ nav.navbar-default {
     margin-left: 0px;
     width: 100%;
 }
-/*header*/
+#top-navbar {
+    padding: 0;
+}
 nav.navbar-default a.navbar-brand {
     color: #FFF056;
     font-family: Garamond;
+    font-size: 200%;
 }
 nav.navbar-default a.navbar-brand:hover,
 nav.navbar-default a.navbar-brand:focus {
     color: #FFF056;
 }
-/*link*/
 nav.navbar-default ul.navbar-nav > li > a {
     color: #DFE2DB;
 }
@@ -54,16 +74,4 @@ nav.navbar-default ul.navbar-nav > .open > a:focus {
     color: #191919;
     background-color:#FFF056;
     font-weight: bold;
-}
-/*BOOTSTRAP LIST GROUP STYLE CHANGES*/
-ul.list-group {
-	background-color: transparent;
-	padding: 10px;
-}
-li.list-group-item {
-	background-color: transparent;
-	border:1px solid rgba(25, 25, 25, 0.2);
-}
-h2.list-group-header {
-	padding-left: 20px;
 }
