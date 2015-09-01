@@ -7,6 +7,23 @@ div.project_header {
 }
 
 /*
+Jumbotron area at the top
+**************************************
+*/
+div.jumbotron {
+    background-color:transparent;
+}
+div.jumbotron h1 {
+    font-family: Garamond;
+    color: #191919;
+    text-align: center;
+}
+div.jumbotron p {
+    color: #191919;
+    text-align: center;
+}
+
+/*
 Styling of common elements in the projects page:
 -Header
 -Highlights (the text beneath the header)

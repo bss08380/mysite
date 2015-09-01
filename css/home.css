@@ -22,6 +22,23 @@ h1.skills-header {
 }
 
 /*
+Main Jumbotron area/header at the top
+**************************************
+*/
+div.jumbotron {
+    background-color:transparent;
+}
+div.jumbotron h1 {
+    font-family: Garamond;
+    color: #191919;
+    text-align: center;
+}
+div.jumbotron p {
+    color: #191919;
+    text-align: center;
+}
+
+/*
 List group (skills) changes and variations from
 the standard bootstrap css
 **************************************

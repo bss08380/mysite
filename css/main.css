@@ -9,18 +9,6 @@ Main, top-level divs and body, jumbotron area, etc.
 #main-body {
     width: 100%;
 }
-div.jumbotron {
-	background-color:transparent;
-}
-div.jumbotron h1 {
-	font-family: Garamond;
-	color: #191919;
-	text-align: center;
-}
-div.jumbotron p {
-	color: #191919;
-	text-align: center;
-}
 
 /*
 Navigation bar changes and variations
