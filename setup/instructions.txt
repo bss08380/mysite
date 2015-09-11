@@ -1,9 +1,0 @@
-Node.js
-----------
-install node
-test it out with "node /bin/whatever/your/path/is.js" and verify
-configure apache2 to proxy stuff over to node's ip/port
-	ensure that the mod_proxy and mod_proxy_html (and a few other) moduels are installed into apache
-	enable them via a2enmod
-	put this line in /etc/apache2/apache2.conf:
-		"ProxyPass /api http://localhost:8000" (or whatever your host/port is)
