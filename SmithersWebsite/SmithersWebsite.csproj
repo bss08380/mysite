@@ -74,6 +74,7 @@
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -112,6 +113,7 @@
     <Content Include="Content\resume.pdf" />
     <Content Include="Views\Experience\Index.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\SmithersWebsite.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
